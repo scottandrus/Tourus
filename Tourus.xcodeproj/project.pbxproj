@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D29374A8170621B000FF0758 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29374A7170621B000FF0758 /* UIKit.framework */; };
+		D29374AA170621B000FF0758 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29374A9170621B000FF0758 /* Foundation.framework */; };
+		D29374AC170621B000FF0758 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29374AB170621B000FF0758 /* CoreGraphics.framework */; };
+		D29374B2170621B000FF0758 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D29374B0170621B000FF0758 /* InfoPlist.strings */; };
+		D29374B4170621B000FF0758 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D29374B3170621B000FF0758 /* main.m */; };
+		D29374B8170621B000FF0758 /* TSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D29374B7170621B000FF0758 /* TSAppDelegate.m */; };
+		D29374BA170621B000FF0758 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D29374B9170621B000FF0758 /* Default.png */; };
+		D29374BC170621B000FF0758 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D29374BB170621B000FF0758 /* Default@2x.png */; };
+		D29374BE170621B000FF0758 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D29374BD170621B000FF0758 /* Default-568h@2x.png */; };
+		D29374C1170621B000FF0758 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D29374BF170621B000FF0758 /* MainStoryboard_iPhone.storyboard */; };
+		D29374C4170621B000FF0758 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D29374C2170621B000FF0758 /* MainStoryboard_iPad.storyboard */; };
+		D29374C7170621B000FF0758 /* TSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29374C6170621B000FF0758 /* TSViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D29374A4170621B000FF0758 /* Tourus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tourus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D29374A7170621B000FF0758 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D29374A9170621B000FF0758 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D29374AB170621B000FF0758 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D29374AF170621B000FF0758 /* Tourus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tourus-Info.plist"; sourceTree = "<group>"; };
+		D29374B1170621B000FF0758 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D29374B3170621B000FF0758 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D29374B5170621B000FF0758 /* Tourus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tourus-Prefix.pch"; sourceTree = "<group>"; };
+		D29374B6170621B000FF0758 /* TSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSAppDelegate.h; sourceTree = "<group>"; };
+		D29374B7170621B000FF0758 /* TSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSAppDelegate.m; sourceTree = "<group>"; };
+		D29374B9170621B000FF0758 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D29374BB170621B000FF0758 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D29374BD170621B000FF0758 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D29374C0170621B000FF0758 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		D29374C3170621B000FF0758 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		D29374C5170621B000FF0758 /* TSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSViewController.h; sourceTree = "<group>"; };
+		D29374C6170621B000FF0758 /* TSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D29374A1170621B000FF0758 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D29374A8170621B000FF0758 /* UIKit.framework in Frameworks */,
+				D29374AA170621B000FF0758 /* Foundation.framework in Frameworks */,
+				D29374AC170621B000FF0758 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D293749B170621B000FF0758 = {
+			isa = PBXGroup;
+			children = (
+				D29374AD170621B000FF0758 /* Tourus */,
+				D29374A6170621B000FF0758 /* Frameworks */,
+				D29374A5170621B000FF0758 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D29374A5170621B000FF0758 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D29374A4170621B000FF0758 /* Tourus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D29374A6170621B000FF0758 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D29374A7170621B000FF0758 /* UIKit.framework */,
+				D29374A9170621B000FF0758 /* Foundation.framework */,
+				D29374AB170621B000FF0758 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D29374AD170621B000FF0758 /* Tourus */ = {
+			isa = PBXGroup;
+			children = (
+				D29374B6170621B000FF0758 /* TSAppDelegate.h */,
+				D29374B7170621B000FF0758 /* TSAppDelegate.m */,
+				D29374C5170621B000FF0758 /* TSViewController.h */,
+				D29374C6170621B000FF0758 /* TSViewController.m */,
+				D29374BF170621B000FF0758 /* MainStoryboard_iPhone.storyboard */,
+				D29374C2170621B000FF0758 /* MainStoryboard_iPad.storyboard */,
+				D29374AE170621B000FF0758 /* Supporting Files */,
+			);
+			path = Tourus;
+			sourceTree = "<group>";
+		};
+		D29374AE170621B000FF0758 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D29374AF170621B000FF0758 /* Tourus-Info.plist */,
+				D29374B0170621B000FF0758 /* InfoPlist.strings */,
+				D29374B3170621B000FF0758 /* main.m */,
+				D29374B5170621B000FF0758 /* Tourus-Prefix.pch */,
+				D29374B9170621B000FF0758 /* Default.png */,
+				D29374BB170621B000FF0758 /* Default@2x.png */,
+				D29374BD170621B000FF0758 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D29374A3170621B000FF0758 /* Tourus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D29374CA170621B000FF0758 /* Build configuration list for PBXNativeTarget "Tourus" */;
+			buildPhases = (
+				D29374A0170621B000FF0758 /* Sources */,
+				D29374A1170621B000FF0758 /* Frameworks */,
+				D29374A2170621B000FF0758 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tourus;
+			productName = Tourus;
+			productReference = D29374A4170621B000FF0758 /* Tourus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D293749C170621B000FF0758 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Tapatory, LLC";
+			};
+			buildConfigurationList = D293749F170621B000FF0758 /* Build configuration list for PBXProject "Tourus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D293749B170621B000FF0758;
+			productRefGroup = D29374A5170621B000FF0758 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D29374A3170621B000FF0758 /* Tourus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D29374A2170621B000FF0758 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D29374B2170621B000FF0758 /* InfoPlist.strings in Resources */,
+				D29374BA170621B000FF0758 /* Default.png in Resources */,
+				D29374BC170621B000FF0758 /* Default@2x.png in Resources */,
+				D29374BE170621B000FF0758 /* Default-568h@2x.png in Resources */,
+				D29374C1170621B000FF0758 /* MainStoryboard_iPhone.storyboard in Resources */,
+				D29374C4170621B000FF0758 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D29374A0170621B000FF0758 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D29374B4170621B000FF0758 /* main.m in Sources */,
+				D29374B8170621B000FF0758 /* TSAppDelegate.m in Sources */,
+				D29374C7170621B000FF0758 /* TSViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D29374B0170621B000FF0758 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D29374B1170621B000FF0758 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D29374BF170621B000FF0758 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D29374C0170621B000FF0758 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		D29374C2170621B000FF0758 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D29374C3170621B000FF0758 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D29374C8170621B000FF0758 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D29374C9170621B000FF0758 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D29374CB170621B000FF0758 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tourus/Tourus-Prefix.pch";
+				INFOPLIST_FILE = "Tourus/Tourus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D29374CC170621B000FF0758 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tourus/Tourus-Prefix.pch";
+				INFOPLIST_FILE = "Tourus/Tourus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D293749F170621B000FF0758 /* Build configuration list for PBXProject "Tourus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D29374C8170621B000FF0758 /* Debug */,
+				D29374C9170621B000FF0758 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D29374CA170621B000FF0758 /* Build configuration list for PBXNativeTarget "Tourus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D29374CB170621B000FF0758 /* Debug */,
+				D29374CC170621B000FF0758 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D293749C170621B000FF0758 /* Project object */;
+}

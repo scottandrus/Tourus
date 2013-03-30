@@ -50,6 +50,7 @@
 		D2C12D3C1706B7300054F500 /* RCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D3A1706B7300054F500 /* RCTextView.m */; };
 		D2C12D3D1706B7300054F500 /* RCTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C12D3B1706B7300054F500 /* RCTextView.xib */; };
 		D2C12D431706B8350054F500 /* SAViewManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D421706B8350054F500 /* SAViewManipulator.m */; };
+		D2C12D461706BB240054F500 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D451706BB240054F500 /* TPKeyboardAvoidingScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,8 @@
 		D2C12D3B1706B7300054F500 /* RCTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCTextView.xib; sourceTree = "<group>"; };
 		D2C12D411706B8350054F500 /* SAViewManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAViewManipulator.h; sourceTree = "<group>"; };
 		D2C12D421706B8350054F500 /* SAViewManipulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAViewManipulator.m; sourceTree = "<group>"; };
+		D2C12D441706BB240054F500 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		D2C12D451706BB240054F500 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +348,8 @@
 		D2C12D401706B7500054F500 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D2C12D441706BB240054F500 /* TPKeyboardAvoidingScrollView.h */,
+				D2C12D451706BB240054F500 /* TPKeyboardAvoidingScrollView.m */,
 				D2C12D3E1706B7350054F500 /* RCTextView */,
 			);
 			name = View;
@@ -441,6 +446,7 @@
 				D2C12D2A1706B2E00054F500 /* UIViewController+Overview.m in Sources */,
 				D2C12D3C1706B7300054F500 /* RCTextView.m in Sources */,
 				D2C12D431706B8350054F500 /* SAViewManipulator.m in Sources */,
+				D2C12D461706BB240054F500 /* TPKeyboardAvoidingScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

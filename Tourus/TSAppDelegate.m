@@ -22,11 +22,13 @@
                   clientKey:@"BIwkq2WlBPDBS07a66By3lucqxcrZBeHzIaPbboP"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    [self applyAppearanceProxies];
+    
     return YES;
 }
 
 - (void)applyAppearanceProxies {
-    [[UINavigationBar appearance] addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"VMDining_NavBar"]]];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"TourusNavBarBG"] forBarMetrics:UIBarMetricsDefault];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

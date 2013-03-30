@@ -30,6 +30,9 @@
 		D2C12CFC17069ED40054F500 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C12CF417069ED40054F500 /* StoreKit.framework */; };
 		D2C12CFD17069ED40054F500 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C12CF517069ED40054F500 /* SystemConfiguration.framework */; };
 		D2C12CFF1706A0E10054F500 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C12CFE1706A0E10054F500 /* MapKit.framework */; };
+		D2C12D021706A7DB0054F500 /* TSCreateTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D011706A7DB0054F500 /* TSCreateTourViewController.m */; };
+		D2C12D081706A8320054F500 /* TSTour.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D071706A8320054F500 /* TSTour.m */; };
+		D2C12D0E1706AC2A0054F500 /* TSTourLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D0D1706AC2A0054F500 /* TSTourLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,12 @@
 		D2C12CF417069ED40054F500 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D2C12CF517069ED40054F500 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D2C12CFE1706A0E10054F500 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D2C12D001706A7DB0054F500 /* TSCreateTourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCreateTourViewController.h; sourceTree = "<group>"; };
+		D2C12D011706A7DB0054F500 /* TSCreateTourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCreateTourViewController.m; sourceTree = "<group>"; };
+		D2C12D061706A8320054F500 /* TSTour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSTour.h; path = ../TSTour.h; sourceTree = "<group>"; };
+		D2C12D071706A8320054F500 /* TSTour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSTour.m; path = ../TSTour.m; sourceTree = "<group>"; };
+		D2C12D0C1706AC2A0054F500 /* TSTourLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTourLocation.h; sourceTree = "<group>"; };
+		D2C12D0D1706AC2A0054F500 /* TSTourLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTourLocation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +77,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C12CF717069ED40054F500 /* CoreLocation.framework in Frameworks */,
 				D2C12CFF1706A0E10054F500 /* MapKit.framework in Frameworks */,
 				D2C12CF617069ED40054F500 /* CFNetwork.framework in Frameworks */,
-				D2C12CF717069ED40054F500 /* CoreLocation.framework in Frameworks */,
 				D2C12CF817069ED40054F500 /* libz.1.1.3.dylib in Frameworks */,
 				D2C12CF917069ED40054F500 /* MobileCoreServices.framework in Frameworks */,
 				D2C12CFA17069ED40054F500 /* QuartzCore.framework in Frameworks */,
@@ -91,7 +100,6 @@
 		D293749B170621B000FF0758 = {
 			isa = PBXGroup;
 			children = (
-				D2C12CFE1706A0E10054F500 /* MapKit.framework */,
 				D29374AD170621B000FF0758 /* Tourus */,
 				D29374A6170621B000FF0758 /* Frameworks */,
 				D29374A5170621B000FF0758 /* Products */,
@@ -109,6 +117,7 @@
 		D29374A6170621B000FF0758 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2C12CFE1706A0E10054F500 /* MapKit.framework */,
 				D2C12CEE17069ED30054F500 /* CFNetwork.framework */,
 				D2C12CEF17069ED30054F500 /* CoreLocation.framework */,
 				D2C12CF017069ED40054F500 /* libz.1.1.3.dylib */,
@@ -129,10 +138,9 @@
 		D29374AD170621B000FF0758 /* Tourus */ = {
 			isa = PBXGroup;
 			children = (
-				D29374B6170621B000FF0758 /* TSAppDelegate.h */,
-				D29374B7170621B000FF0758 /* TSAppDelegate.m */,
-				D29374C5170621B000FF0758 /* TSViewController.h */,
-				D29374C6170621B000FF0758 /* TSViewController.m */,
+				D2C12D041706A7FC0054F500 /* TSAppDelegate */,
+				D2C12D0A1706A8460054F500 /* Model */,
+				D2C12D0B1706A84D0054F500 /* Controller */,
 				D29374BF170621B000FF0758 /* MainStoryboard_iPhone.storyboard */,
 				D29374C2170621B000FF0758 /* MainStoryboard_iPad.storyboard */,
 				D29374AE170621B000FF0758 /* Supporting Files */,
@@ -152,6 +160,69 @@
 				D29374BD170621B000FF0758 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2C12D031706A7F40054F500 /* TSViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D29374C5170621B000FF0758 /* TSViewController.h */,
+				D29374C6170621B000FF0758 /* TSViewController.m */,
+			);
+			name = TSViewController;
+			sourceTree = "<group>";
+		};
+		D2C12D041706A7FC0054F500 /* TSAppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				D29374B6170621B000FF0758 /* TSAppDelegate.h */,
+				D29374B7170621B000FF0758 /* TSAppDelegate.m */,
+			);
+			name = TSAppDelegate;
+			sourceTree = "<group>";
+		};
+		D2C12D051706A8060054F500 /* TSCreateTourViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D2C12D001706A7DB0054F500 /* TSCreateTourViewController.h */,
+				D2C12D011706A7DB0054F500 /* TSCreateTourViewController.m */,
+			);
+			name = TSCreateTourViewController;
+			sourceTree = "<group>";
+		};
+		D2C12D091706A8400054F500 /* TSTour */ = {
+			isa = PBXGroup;
+			children = (
+				D2C12D061706A8320054F500 /* TSTour.h */,
+				D2C12D071706A8320054F500 /* TSTour.m */,
+			);
+			name = TSTour;
+			sourceTree = "<group>";
+		};
+		D2C12D0A1706A8460054F500 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D2C12D0F1706AC370054F500 /* TSTourLocation */,
+				D2C12D091706A8400054F500 /* TSTour */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D2C12D0B1706A84D0054F500 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D2C12D031706A7F40054F500 /* TSViewController */,
+				D2C12D051706A8060054F500 /* TSCreateTourViewController */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D2C12D0F1706AC370054F500 /* TSTourLocation */ = {
+			isa = PBXGroup;
+			children = (
+				D2C12D0C1706AC2A0054F500 /* TSTourLocation.h */,
+				D2C12D0D1706AC2A0054F500 /* TSTourLocation.m */,
+			);
+			name = TSTourLocation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +296,9 @@
 				D29374B4170621B000FF0758 /* main.m in Sources */,
 				D29374B8170621B000FF0758 /* TSAppDelegate.m in Sources */,
 				D29374C7170621B000FF0758 /* TSViewController.m in Sources */,
+				D2C12D021706A7DB0054F500 /* TSCreateTourViewController.m in Sources */,
+				D2C12D081706A8320054F500 /* TSTour.m in Sources */,
+				D2C12D0E1706AC2A0054F500 /* TSTourLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

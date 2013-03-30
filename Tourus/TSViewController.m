@@ -15,6 +15,12 @@
 // Utilities
 #import "SAViewManipulator.h"
 
+// View Controllers
+#import "TSCreateTourViewController.h"
+
+// Model Objects
+#import "TSTour.h"
+
 // Frameworks
 #import <Parse/Parse.h>
 
@@ -27,6 +33,23 @@
 @end
 
 @implementation TSViewController
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.tourList = [NSArray array];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.tourList = [NSArray array];
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
@@ -43,6 +66,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.toursTableView reloadData];
+}
 
 #pragma mark - UI Customization
 
@@ -55,7 +82,7 @@
      [[UIImageView alloc] initWithImage:
       [UIImage imageNamed:@"TourusNavBarText"]]];
     
-    // Custom left bar-button item
+    // Custom right bar-button item
     self.navigationItem.rightBarButtonItem =
     [UIBarButtonItem barButtonWithImage:
      [UIImage imageNamed:@"TSPlusButton"]
@@ -90,13 +117,16 @@
 #pragma mark - UIStoryboardMethods
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Nothing to do here
+    if ([segue.identifier isEqualToString:kAddTourSegue]) {
+        TSCreateTourViewController *tsctvc = (TSCreateTourViewController *)[segue.destinationViewController topViewController];
+        tsctvc.tsvc = self;
+    }
 }
 
 #pragma mark - TableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.tourList.count;
 }
 
 // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
@@ -109,7 +139,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Tour %d", indexPath.row];
+    TSTour *aTour = [[self tourList] objectAtIndex:indexPath.row];
+    cell.textLabel.text = [aTour tourName];
     
     return cell;
 }

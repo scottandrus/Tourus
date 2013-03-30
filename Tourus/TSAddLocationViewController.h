@@ -12,9 +12,13 @@
 #import "TSTour.h"
 #import "TSTourLocation.h"
 
+// View Controllers
+#import "TSViewController.h"
+
 @interface TSAddLocationViewController : UIViewController
 
 @property (strong, nonatomic) TSTour *tour;
 @property (strong, nonatomic) TSTourLocation *thisLocation;
+@property (strong, nonatomic) TSViewController *tsvc;
 
 @end

@@ -8,6 +8,12 @@
 
 #import "TSCreateTourViewController.h"
 
+// Model Objects
+#import "TSTour.h"
+
+// View Controllers
+#import "TSAddLocationViewController.h"
+
 // Categories
 #import "UIImage+Color.h"
 #import "UIBarButtonItem+Custom.h"
@@ -64,6 +70,16 @@
     self.lettersRemaining = 140 - textView.text.length;
     self.lettersRemainingLabel.text =
     [NSString stringWithFormat:@"%d", self.lettersRemaining];
+}
+
+#pragma mark - UIStoryboardMethods
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    TSAddLocationViewController *tsalvc = segue.destinationViewController;
+    tsalvc.tour = [TSTour new];
+    tsalvc.tour.tourName = self.nameTextField.text;
+    tsalvc.tour.tourDescription = self.descriptionTextView.text;
+    tsalvc.tsvc = self.tsvc;
 }
 
 @end

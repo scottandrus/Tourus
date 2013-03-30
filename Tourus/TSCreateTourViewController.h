@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+#import "TSViewController.h"
+
 @interface TSCreateTourViewController : UIViewController <UITextViewDelegate>
 
 @property (assign, nonatomic) NSInteger lettersRemaining;
+@property (strong, nonatomic) NSArray *tourList;
+@property (strong, nonatomic) TSViewController *tsvc;
 
 // IBOutlets
 @property (strong, nonatomic) IBOutlet UILabel *lettersRemainingLabel;

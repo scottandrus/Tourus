@@ -11,11 +11,12 @@
 
 @interface TSTour : NSObject
 
-@property NSString *tourName;
-@property NSString *createdBy;
-@property NSInteger viewCount;
-@property UIImage *tourPhoto;
-@property CLLocation *markingLocation;
-@property NSArray *tourLocations;
+@property (strong, nonatomic) NSString *tourName;
+@property (strong, nonatomic) NSString *createdBy;
+@property (strong, nonatomic) NSString *tourDescription;
+@property (assign, nonatomic) NSInteger viewCount;
+@property (strong, nonatomic) UIImage *tourPhoto;
+@property (strong, nonatomic) CLLocation *markingLocation;
+@property (strong, nonatomic) NSArray *tourLocations;
 
 @end

@@ -8,12 +8,25 @@
 
 #import "TSAppDelegate.h"
 
+// Frameworks
+#import <Parse/Parse.h>
+
 @implementation TSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // Parse
+    [Parse setApplicationId:@"FRExX74sBubFoDk1wTYFoqy7VTFpUgMsKjEZNaBv"
+                  clientKey:@"BIwkq2WlBPDBS07a66By3lucqxcrZBeHzIaPbboP"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     return YES;
+}
+
+- (void)applyAppearanceProxies {
+    [[UINavigationBar appearance] addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"VMDining_NavBar"]]];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

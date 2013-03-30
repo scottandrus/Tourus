@@ -1,23 +1,81 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ydG-YK-xit">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="TSViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZsO-Jo-BY1">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="353" id="DKG-Ho-g3r"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="353" type="user" id="NHu-Vx-5Da"/>
+                                </constraints>
+                            </tableView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="G4L-Ec-zYb">
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" type="user" id="1Kn-JV-JaA"/>
+                                    <constraint firstAttribute="height" constant="150" id="Aui-XW-e8l"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZsO-Jo-BY1" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="16X-dq-hcB"/>
+                            <constraint firstItem="ZsO-Jo-BY1" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="55h-fp-sOt"/>
+                            <constraint firstItem="G4L-Ec-zYb" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="Nbu-lc-Ngo"/>
+                            <constraint firstItem="G4L-Ec-zYb" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Nd0-uR-AcU"/>
+                            <constraint firstItem="ZsO-Jo-BY1" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="c3O-af-Whj"/>
+                            <constraint firstItem="G4L-Ec-zYb" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="ttZ-Cu-ihl"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="yel-Rg-Nfh"/>
+                    <connections>
+                        <outlet property="toursMapView" destination="G4L-Ec-zYb" id="1MX-vQ-3HG"/>
+                        <outlet property="toursTableView" destination="ZsO-Jo-BY1" id="3yk-ow-alW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="458" y="728"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zg7-Fi-Fz9">
+            <objects>
+                <navigationController id="ydG-YK-xit" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pIU-41-1UX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="y2C-nd-Emh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbk-iH-5SA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33" y="728"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TSViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TSViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="toursMapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

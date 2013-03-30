@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface TSViewController : UIViewController
+@interface TSViewController : UIViewController <MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) IBOutlet MKMapView *toursMapView;
+@property (strong, nonatomic) IBOutlet UITableView *toursTableView;
 
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D219F7891706C75000577C51 /* TSMenuButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D219F7881706C75000577C51 /* TSMenuButton@2x.png */; };
+		D219F78B1706C7EA00577C51 /* TSBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D219F78A1706C7EA00577C51 /* TSBackButton@2x.png */; };
 		D29374A8170621B000FF0758 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29374A7170621B000FF0758 /* UIKit.framework */; };
 		D29374AA170621B000FF0758 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29374A9170621B000FF0758 /* Foundation.framework */; };
 		D29374AC170621B000FF0758 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29374AB170621B000FF0758 /* CoreGraphics.framework */; };
@@ -56,6 +58,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D219F7881706C75000577C51 /* TSMenuButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TSMenuButton@2x.png"; sourceTree = "<group>"; };
+		D219F78A1706C7EA00577C51 /* TSBackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TSBackButton@2x.png"; sourceTree = "<group>"; };
 		D29374A4170621B000FF0758 /* Tourus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tourus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29374A7170621B000FF0758 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D29374A9170621B000FF0758 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -188,7 +192,7 @@
 		D29374AD170621B000FF0758 /* Tourus */ = {
 			isa = PBXGroup;
 			children = (
-				D2C12D041706A7FC0054F500 /* TSAppDelegate */,
+				D2C12D041706A7FC0054F500 /* App Delegate */,
 				D2C12D2C1706B2EF0054F500 /* Utilities */,
 				D2C12D0A1706A8460054F500 /* Model */,
 				D2C12D401706B7500054F500 /* View */,
@@ -222,13 +226,13 @@
 			name = TSViewController;
 			sourceTree = "<group>";
 		};
-		D2C12D041706A7FC0054F500 /* TSAppDelegate */ = {
+		D2C12D041706A7FC0054F500 /* App Delegate */ = {
 			isa = PBXGroup;
 			children = (
 				D29374B6170621B000FF0758 /* TSAppDelegate.h */,
 				D29374B7170621B000FF0758 /* TSAppDelegate.m */,
 			);
-			name = TSAppDelegate;
+			name = "App Delegate";
 			sourceTree = "<group>";
 		};
 		D2C12D051706A8060054F500 /* TSCreateTourViewController */ = {
@@ -279,6 +283,8 @@
 		D2C12D141706B0660054F500 /* Nav Bar */ = {
 			isa = PBXGroup;
 			children = (
+				D219F78A1706C7EA00577C51 /* TSBackButton@2x.png */,
+				D219F7881706C75000577C51 /* TSMenuButton@2x.png */,
 				D2C12D491706C22A0054F500 /* TourusNavBarText@2x.png */,
 				D2C12D471706BF290054F500 /* TSPlusButton@2x.png */,
 				D2C12D351706B5D10054F500 /* 05-arrow-west.png */,
@@ -429,6 +435,8 @@
 				D2C12D3D1706B7300054F500 /* RCTextView.xib in Resources */,
 				D2C12D481706BF290054F500 /* TSPlusButton@2x.png in Resources */,
 				D2C12D4A1706C22A0054F500 /* TourusNavBarText@2x.png in Resources */,
+				D219F7891706C75000577C51 /* TSMenuButton@2x.png in Resources */,
+				D219F78B1706C7EA00577C51 /* TSBackButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

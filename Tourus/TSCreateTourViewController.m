@@ -47,7 +47,7 @@
 - (void)setupUserInterface {
     
     // Custom left bar-button item
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"05-arrow-west" withColor:[UIColor whiteColor]] style:UIBarButtonItemStylePlain target:self action:@selector(cancelPressed)];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"TSBackButton"] style:UIBarButtonItemStylePlain target:self action:@selector(cancelPressed)];
 }
 
 #pragma mark - Actions

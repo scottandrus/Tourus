@@ -62,17 +62,24 @@
                                   style:UIBarButtonItemStylePlain
                                  target:self
                                  action:@selector(addTourPressed)];
-//    UIView *bBIView = self.navigationItem.rightBarButtonItem.customView;
     
-    // Add a shadow to that bar-button item
-//    [SAViewManipulator addShadowToView:bBIView withOpacity:.8 radius:.5 andOffset:CGSizeMake(0, -1)];
-//    [SAViewManipulator addBorderToView:bBIView withWidth:1 color:[UIColor blackColor] andRadius:0];
+    // Custom left bar-button item
+    self.navigationItem.leftBarButtonItem =
+    [UIBarButtonItem barButtonWithImage:
+     [UIImage imageNamed:@"TSMenuButton"]
+                                  style:UIBarButtonItemStylePlain
+                                 target:self
+                                 action:@selector(menuPressed)];
 }
 
 #pragma mark - Actions
 
 - (void)addTourPressed {
     [self performSegueWithIdentifier:kAddTourSegue sender:self];
+}
+
+- (void)menuPressed {
+
 }
 
 #pragma mark - UIStoryboardMethods

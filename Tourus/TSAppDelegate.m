@@ -11,6 +11,9 @@
 // Frameworks
 #import <Parse/Parse.h>
 
+// Other classes
+#import "TSViewController.h"
+
 @implementation TSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -23,6 +26,7 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     [self applyAppearanceProxies];
+    [self setupSlider];
     
     return YES;
 }
@@ -30,7 +34,20 @@
 - (void)applyAppearanceProxies {
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"TourusNavBarBG"] forBarMetrics:UIBarMetricsDefault];
 }
-							
+
+- (void)setupSlider {
+    UINavigationController *rootController = (UINavigationController *)self.window.rootViewController;
+    TSViewController *tsvc = (TSViewController *)rootController.topViewController;
+    
+    self.frontVC = rootController;
+    self.backVC = [UIViewController new];
+    
+    self.viewController = [[JSSlidingViewController alloc] initWithFrontViewController:self.frontVC backViewController:self.backVC];
+    self.viewController.delegate = self;
+    tsvc.sVC = self.viewController;
+    self.window.rootViewController = self.viewController;
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

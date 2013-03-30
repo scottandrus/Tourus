@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TSAppDelegate : UIResponder <UIApplicationDelegate>
+// Utilities
+#import "JSSlidingViewController.h"
+
+@interface TSAppDelegate : UIResponder <UIApplicationDelegate, JSSlidingViewControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) JSSlidingViewController *viewController;
+
+@property (strong, nonatomic) UIViewController *backVC;
+@property (strong, nonatomic) UINavigationController *frontVC;
 
 @end

@@ -46,6 +46,8 @@
 
 - (void)setupUserInterface {
     
+    self.descriptionTextView.delegate = self;
+    
     // Custom left bar-button item
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"TSBackButton"] style:UIBarButtonItemStylePlain target:self action:@selector(cancelPressed)];
 }
@@ -54,6 +56,14 @@
 
 - (void)cancelPressed {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UITextViewDelegate
+
+- (void)textViewDidChange:(UITextView *)textView {
+    self.lettersRemaining = 140 - textView.text.length;
+    self.lettersRemainingLabel.text =
+    [NSString stringWithFormat:@"%d", self.lettersRemaining];
 }
 
 @end

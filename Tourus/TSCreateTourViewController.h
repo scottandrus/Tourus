@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TSCreateTourViewController : UIViewController
+@interface TSCreateTourViewController : UIViewController <UITextViewDelegate>
+
+@property (assign, nonatomic) NSInteger lettersRemaining;
+
+// IBOutlets
+@property (strong, nonatomic) IBOutlet UILabel *lettersRemainingLabel;
+@property (strong, nonatomic) IBOutlet UITextView *descriptionTextView;
+@property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 
 @end

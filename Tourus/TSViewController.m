@@ -79,8 +79,13 @@
 }
 
 - (void)menuPressed {
-
+    if (!self.sVC.isOpen) {
+        [self.sVC openSlider:YES completion:nil];
+    } else [self.sVC closeSlider:YES completion:nil];
 }
+
+#pragma mark - Utility methods
+
 
 #pragma mark - UIStoryboardMethods
 

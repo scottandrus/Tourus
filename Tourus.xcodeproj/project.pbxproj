@@ -47,6 +47,9 @@
 		D2C12D341706B5B20054F500 /* 13-plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2C12D321706B5B20054F500 /* 13-plus@2x.png */; };
 		D2C12D371706B5D20054F500 /* 05-arrow-west.png in Resources */ = {isa = PBXBuildFile; fileRef = D2C12D351706B5D10054F500 /* 05-arrow-west.png */; };
 		D2C12D381706B5D20054F500 /* 05-arrow-west@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2C12D361706B5D20054F500 /* 05-arrow-west@2x.png */; };
+		D2C12D3C1706B7300054F500 /* RCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D3A1706B7300054F500 /* RCTextView.m */; };
+		D2C12D3D1706B7300054F500 /* RCTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C12D3B1706B7300054F500 /* RCTextView.xib */; };
+		D2C12D431706B8350054F500 /* SAViewManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D421706B8350054F500 /* SAViewManipulator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +108,11 @@
 		D2C12D321706B5B20054F500 /* 13-plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "13-plus@2x.png"; sourceTree = "<group>"; };
 		D2C12D351706B5D10054F500 /* 05-arrow-west.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "05-arrow-west.png"; sourceTree = "<group>"; };
 		D2C12D361706B5D20054F500 /* 05-arrow-west@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "05-arrow-west@2x.png"; sourceTree = "<group>"; };
+		D2C12D391706B7300054F500 /* RCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTextView.h; sourceTree = "<group>"; };
+		D2C12D3A1706B7300054F500 /* RCTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTextView.m; sourceTree = "<group>"; };
+		D2C12D3B1706B7300054F500 /* RCTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCTextView.xib; sourceTree = "<group>"; };
+		D2C12D411706B8350054F500 /* SAViewManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAViewManipulator.h; sourceTree = "<group>"; };
+		D2C12D421706B8350054F500 /* SAViewManipulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAViewManipulator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,13 +181,12 @@
 		D29374AD170621B000FF0758 /* Tourus */ = {
 			isa = PBXGroup;
 			children = (
-				D2C12D2C1706B2EF0054F500 /* Utilities */,
 				D2C12D041706A7FC0054F500 /* TSAppDelegate */,
+				D2C12D2C1706B2EF0054F500 /* Utilities */,
 				D2C12D0A1706A8460054F500 /* Model */,
+				D2C12D401706B7500054F500 /* View */,
 				D2C12D0B1706A84D0054F500 /* Controller */,
-				D29374BF170621B000FF0758 /* MainStoryboard_iPhone.storyboard */,
-				D29374C2170621B000FF0758 /* MainStoryboard_iPad.storyboard */,
-				D2C12D151706B06E0054F500 /* Images */,
+				D2C12D3F1706B7460054F500 /* User Interface */,
 				D29374AE170621B000FF0758 /* Supporting Files */,
 			);
 			path = Tourus;
@@ -308,9 +315,39 @@
 		D2C12D2C1706B2EF0054F500 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D2C12D411706B8350054F500 /* SAViewManipulator.h */,
+				D2C12D421706B8350054F500 /* SAViewManipulator.m */,
 				D2C12D2B1706B2E60054F500 /* Categories */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		D2C12D3E1706B7350054F500 /* RCTextView */ = {
+			isa = PBXGroup;
+			children = (
+				D2C12D391706B7300054F500 /* RCTextView.h */,
+				D2C12D3A1706B7300054F500 /* RCTextView.m */,
+				D2C12D3B1706B7300054F500 /* RCTextView.xib */,
+			);
+			name = RCTextView;
+			sourceTree = "<group>";
+		};
+		D2C12D3F1706B7460054F500 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				D29374BF170621B000FF0758 /* MainStoryboard_iPhone.storyboard */,
+				D29374C2170621B000FF0758 /* MainStoryboard_iPad.storyboard */,
+				D2C12D151706B06E0054F500 /* Images */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		D2C12D401706B7500054F500 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D2C12D3E1706B7350054F500 /* RCTextView */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +415,7 @@
 				D2C12D341706B5B20054F500 /* 13-plus@2x.png in Resources */,
 				D2C12D371706B5D20054F500 /* 05-arrow-west.png in Resources */,
 				D2C12D381706B5D20054F500 /* 05-arrow-west@2x.png in Resources */,
+				D2C12D3D1706B7300054F500 /* RCTextView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +439,8 @@
 				D2C12D281706B2E00054F500 /* UIImage+Color.m in Sources */,
 				D2C12D291706B2E00054F500 /* UIView+Frame.m in Sources */,
 				D2C12D2A1706B2E00054F500 /* UIViewController+Overview.m in Sources */,
+				D2C12D3C1706B7300054F500 /* RCTextView.m in Sources */,
+				D2C12D431706B8350054F500 /* SAViewManipulator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

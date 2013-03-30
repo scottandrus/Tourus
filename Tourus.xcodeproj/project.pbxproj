@@ -51,6 +51,8 @@
 		D2C12D3D1706B7300054F500 /* RCTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C12D3B1706B7300054F500 /* RCTextView.xib */; };
 		D2C12D431706B8350054F500 /* SAViewManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D421706B8350054F500 /* SAViewManipulator.m */; };
 		D2C12D461706BB240054F500 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D451706BB240054F500 /* TPKeyboardAvoidingScrollView.m */; };
+		D2C12D481706BF290054F500 /* TSPlusButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2C12D471706BF290054F500 /* TSPlusButton@2x.png */; };
+		D2C12D4A1706C22A0054F500 /* TourusNavBarText@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2C12D491706C22A0054F500 /* TourusNavBarText@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +118,8 @@
 		D2C12D421706B8350054F500 /* SAViewManipulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAViewManipulator.m; sourceTree = "<group>"; };
 		D2C12D441706BB240054F500 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
 		D2C12D451706BB240054F500 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		D2C12D471706BF290054F500 /* TSPlusButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TSPlusButton@2x.png"; sourceTree = "<group>"; };
+		D2C12D491706C22A0054F500 /* TourusNavBarText@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TourusNavBarText@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +279,8 @@
 		D2C12D141706B0660054F500 /* Nav Bar */ = {
 			isa = PBXGroup;
 			children = (
+				D2C12D491706C22A0054F500 /* TourusNavBarText@2x.png */,
+				D2C12D471706BF290054F500 /* TSPlusButton@2x.png */,
 				D2C12D351706B5D10054F500 /* 05-arrow-west.png */,
 				D2C12D361706B5D20054F500 /* 05-arrow-west@2x.png */,
 				D2C12D311706B5B20054F500 /* 13-plus.png */,
@@ -421,6 +427,8 @@
 				D2C12D371706B5D20054F500 /* 05-arrow-west.png in Resources */,
 				D2C12D381706B5D20054F500 /* 05-arrow-west@2x.png in Resources */,
 				D2C12D3D1706B7300054F500 /* RCTextView.xib in Resources */,
+				D2C12D481706BF290054F500 /* TSPlusButton@2x.png in Resources */,
+				D2C12D4A1706C22A0054F500 /* TourusNavBarText@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

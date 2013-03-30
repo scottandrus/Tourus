@@ -34,6 +34,19 @@
 		D2C12D081706A8320054F500 /* TSTour.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D071706A8320054F500 /* TSTour.m */; };
 		D2C12D0E1706AC2A0054F500 /* TSTourLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D0D1706AC2A0054F500 /* TSTourLocation.m */; };
 		D2C12D131706B0630054F500 /* TourusNavBarBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2C12D121706B0630054F500 /* TourusNavBarBG@2x.png */; };
+		D2C12D241706B2E00054F500 /* CLLocation+AFExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D171706B2DF0054F500 /* CLLocation+AFExtensions.m */; };
+		D2C12D251706B2E00054F500 /* CLLocationManager+AFExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D191706B2DF0054F500 /* CLLocationManager+AFExtensions.m */; };
+		D2C12D261706B2E00054F500 /* UIBarButtonItem+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D1B1706B2DF0054F500 /* UIBarButtonItem+Custom.m */; };
+		D2C12D271706B2E00054F500 /* UIColor+i7HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D1D1706B2E00054F500 /* UIColor+i7HexColor.m */; };
+		D2C12D281706B2E00054F500 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D1F1706B2E00054F500 /* UIImage+Color.m */; };
+		D2C12D291706B2E00054F500 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D211706B2E00054F500 /* UIView+Frame.m */; };
+		D2C12D2A1706B2E00054F500 /* UIViewController+Overview.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C12D231706B2E00054F500 /* UIViewController+Overview.m */; };
+		D2C12D2F1706B3350054F500 /* 71-compass.png in Resources */ = {isa = PBXBuildFile; fileRef = D2C12D2D1706B3350054F500 /* 71-compass.png */; };
+		D2C12D301706B3350054F500 /* 71-compass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2C12D2E1706B3350054F500 /* 71-compass@2x.png */; };
+		D2C12D331706B5B20054F500 /* 13-plus.png in Resources */ = {isa = PBXBuildFile; fileRef = D2C12D311706B5B20054F500 /* 13-plus.png */; };
+		D2C12D341706B5B20054F500 /* 13-plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2C12D321706B5B20054F500 /* 13-plus@2x.png */; };
+		D2C12D371706B5D20054F500 /* 05-arrow-west.png in Resources */ = {isa = PBXBuildFile; fileRef = D2C12D351706B5D10054F500 /* 05-arrow-west.png */; };
+		D2C12D381706B5D20054F500 /* 05-arrow-west@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2C12D361706B5D20054F500 /* 05-arrow-west@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +85,26 @@
 		D2C12D0C1706AC2A0054F500 /* TSTourLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTourLocation.h; sourceTree = "<group>"; };
 		D2C12D0D1706AC2A0054F500 /* TSTourLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTourLocation.m; sourceTree = "<group>"; };
 		D2C12D121706B0630054F500 /* TourusNavBarBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TourusNavBarBG@2x.png"; sourceTree = "<group>"; };
+		D2C12D161706B2DF0054F500 /* CLLocation+AFExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+AFExtensions.h"; sourceTree = "<group>"; };
+		D2C12D171706B2DF0054F500 /* CLLocation+AFExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+AFExtensions.m"; sourceTree = "<group>"; };
+		D2C12D181706B2DF0054F500 /* CLLocationManager+AFExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocationManager+AFExtensions.h"; sourceTree = "<group>"; };
+		D2C12D191706B2DF0054F500 /* CLLocationManager+AFExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocationManager+AFExtensions.m"; sourceTree = "<group>"; };
+		D2C12D1A1706B2DF0054F500 /* UIBarButtonItem+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Custom.h"; sourceTree = "<group>"; };
+		D2C12D1B1706B2DF0054F500 /* UIBarButtonItem+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Custom.m"; sourceTree = "<group>"; };
+		D2C12D1C1706B2E00054F500 /* UIColor+i7HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+i7HexColor.h"; sourceTree = "<group>"; };
+		D2C12D1D1706B2E00054F500 /* UIColor+i7HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+i7HexColor.m"; sourceTree = "<group>"; };
+		D2C12D1E1706B2E00054F500 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		D2C12D1F1706B2E00054F500 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		D2C12D201706B2E00054F500 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		D2C12D211706B2E00054F500 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		D2C12D221706B2E00054F500 /* UIViewController+Overview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Overview.h"; sourceTree = "<group>"; };
+		D2C12D231706B2E00054F500 /* UIViewController+Overview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Overview.m"; sourceTree = "<group>"; };
+		D2C12D2D1706B3350054F500 /* 71-compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "71-compass.png"; sourceTree = "<group>"; };
+		D2C12D2E1706B3350054F500 /* 71-compass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "71-compass@2x.png"; sourceTree = "<group>"; };
+		D2C12D311706B5B20054F500 /* 13-plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "13-plus.png"; sourceTree = "<group>"; };
+		D2C12D321706B5B20054F500 /* 13-plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "13-plus@2x.png"; sourceTree = "<group>"; };
+		D2C12D351706B5D10054F500 /* 05-arrow-west.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "05-arrow-west.png"; sourceTree = "<group>"; };
+		D2C12D361706B5D20054F500 /* 05-arrow-west@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "05-arrow-west@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +173,7 @@
 		D29374AD170621B000FF0758 /* Tourus */ = {
 			isa = PBXGroup;
 			children = (
+				D2C12D2C1706B2EF0054F500 /* Utilities */,
 				D2C12D041706A7FC0054F500 /* TSAppDelegate */,
 				D2C12D0A1706A8460054F500 /* Model */,
 				D2C12D0B1706A84D0054F500 /* Controller */,
@@ -231,6 +265,12 @@
 		D2C12D141706B0660054F500 /* Nav Bar */ = {
 			isa = PBXGroup;
 			children = (
+				D2C12D351706B5D10054F500 /* 05-arrow-west.png */,
+				D2C12D361706B5D20054F500 /* 05-arrow-west@2x.png */,
+				D2C12D311706B5B20054F500 /* 13-plus.png */,
+				D2C12D321706B5B20054F500 /* 13-plus@2x.png */,
+				D2C12D2D1706B3350054F500 /* 71-compass.png */,
+				D2C12D2E1706B3350054F500 /* 71-compass@2x.png */,
 				D2C12D121706B0630054F500 /* TourusNavBarBG@2x.png */,
 			);
 			name = "Nav Bar";
@@ -242,6 +282,35 @@
 				D2C12D141706B0660054F500 /* Nav Bar */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		D2C12D2B1706B2E60054F500 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D2C12D161706B2DF0054F500 /* CLLocation+AFExtensions.h */,
+				D2C12D171706B2DF0054F500 /* CLLocation+AFExtensions.m */,
+				D2C12D181706B2DF0054F500 /* CLLocationManager+AFExtensions.h */,
+				D2C12D191706B2DF0054F500 /* CLLocationManager+AFExtensions.m */,
+				D2C12D1A1706B2DF0054F500 /* UIBarButtonItem+Custom.h */,
+				D2C12D1B1706B2DF0054F500 /* UIBarButtonItem+Custom.m */,
+				D2C12D1C1706B2E00054F500 /* UIColor+i7HexColor.h */,
+				D2C12D1D1706B2E00054F500 /* UIColor+i7HexColor.m */,
+				D2C12D1E1706B2E00054F500 /* UIImage+Color.h */,
+				D2C12D1F1706B2E00054F500 /* UIImage+Color.m */,
+				D2C12D201706B2E00054F500 /* UIView+Frame.h */,
+				D2C12D211706B2E00054F500 /* UIView+Frame.m */,
+				D2C12D221706B2E00054F500 /* UIViewController+Overview.h */,
+				D2C12D231706B2E00054F500 /* UIViewController+Overview.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		D2C12D2C1706B2EF0054F500 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D2C12D2B1706B2E60054F500 /* Categories */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +372,12 @@
 				D29374C1170621B000FF0758 /* MainStoryboard_iPhone.storyboard in Resources */,
 				D29374C4170621B000FF0758 /* MainStoryboard_iPad.storyboard in Resources */,
 				D2C12D131706B0630054F500 /* TourusNavBarBG@2x.png in Resources */,
+				D2C12D2F1706B3350054F500 /* 71-compass.png in Resources */,
+				D2C12D301706B3350054F500 /* 71-compass@2x.png in Resources */,
+				D2C12D331706B5B20054F500 /* 13-plus.png in Resources */,
+				D2C12D341706B5B20054F500 /* 13-plus@2x.png in Resources */,
+				D2C12D371706B5D20054F500 /* 05-arrow-west.png in Resources */,
+				D2C12D381706B5D20054F500 /* 05-arrow-west@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +394,13 @@
 				D2C12D021706A7DB0054F500 /* TSCreateTourViewController.m in Sources */,
 				D2C12D081706A8320054F500 /* TSTour.m in Sources */,
 				D2C12D0E1706AC2A0054F500 /* TSTourLocation.m in Sources */,
+				D2C12D241706B2E00054F500 /* CLLocation+AFExtensions.m in Sources */,
+				D2C12D251706B2E00054F500 /* CLLocationManager+AFExtensions.m in Sources */,
+				D2C12D261706B2E00054F500 /* UIBarButtonItem+Custom.m in Sources */,
+				D2C12D271706B2E00054F500 /* UIColor+i7HexColor.m in Sources */,
+				D2C12D281706B2E00054F500 /* UIImage+Color.m in Sources */,
+				D2C12D291706B2E00054F500 /* UIView+Frame.m in Sources */,
+				D2C12D2A1706B2E00054F500 /* UIViewController+Overview.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

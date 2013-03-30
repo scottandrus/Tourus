@@ -14,4 +14,7 @@
 @property (strong, nonatomic) IBOutlet MKMapView *toursMapView;
 @property (strong, nonatomic) IBOutlet UITableView *toursTableView;
 
+// Data source
+@property (strong, nonatomic) NSArray *tourList;
+
 @end

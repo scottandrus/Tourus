@@ -8,6 +8,10 @@
 
 #import "TSCreateTourViewController.h"
 
+// Categories
+#import "UIImage+Color.h"
+#import "UIBarButtonItem+Custom.h"
+
 @interface TSCreateTourViewController ()
 
 @end
@@ -27,12 +31,29 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    // Set up interface
+    [self setupUserInterface];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UI Customization
+
+- (void)setupUserInterface {
+    
+    // Custom left bar-button item
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"05-arrow-west" withColor:[UIColor whiteColor]] style:UIBarButtonItemStylePlain target:self action:@selector(cancelPressed)];
+}
+
+#pragma mark - Actions
+
+- (void)cancelPressed {
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

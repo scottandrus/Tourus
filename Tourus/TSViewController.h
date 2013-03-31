@@ -21,6 +21,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *toursTableView;
 
 @property (strong, nonatomic) JSSlidingViewController *sVC;
+@property (strong, nonatomic) UIImageView *navBarText;
 
 @property BOOL shouldZoomMap;
 @property CGFloat previousSize;

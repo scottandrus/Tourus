@@ -40,7 +40,8 @@
     TSViewController *tsvc = (TSViewController *)rootController.topViewController;
     
     self.frontVC = rootController;
-    self.backVC = [UIViewController new];
+    TSMenuViewController *tsmvc = [[TSMenuViewController alloc] initWithNibName:@"TSMenuViewController" bundle:nil];
+    self.backVC = tsmvc;
     
     self.viewController = [[JSSlidingViewController alloc] initWithFrontViewController:self.frontVC backViewController:self.backVC];
     self.viewController.delegate = self;

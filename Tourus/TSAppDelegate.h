@@ -10,6 +10,7 @@
 
 // Utilities
 #import "JSSlidingViewController.h"
+#import "TSMenuViewController.h"
 
 @interface TSAppDelegate : UIResponder <UIApplicationDelegate, JSSlidingViewControllerDelegate>
 
@@ -17,7 +18,7 @@
 
 @property (strong, nonatomic) JSSlidingViewController *viewController;
 
-@property (strong, nonatomic) UIViewController *backVC;
+@property (strong, nonatomic) TSMenuViewController *backVC;
 @property (strong, nonatomic) UINavigationController *frontVC;
 
 @end

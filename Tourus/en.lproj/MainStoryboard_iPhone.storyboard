@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <button opaque="NO" alpha="0.60000000000000009" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9XK-PF-ru9">
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="9XK-PF-ru9">
                                 <rect key="frame" x="280" y="112" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -45,33 +45,192 @@
                         <outlet property="toursMapView" destination="G4L-Ec-zYb" id="1MX-vQ-3HG"/>
                         <outlet property="toursTableView" destination="ZsO-Jo-BY1" id="3yk-ow-alW"/>
                         <segue destination="wnh-vF-QTm" kind="modal" identifier="add_tour_segue" modalTransitionStyle="flipHorizontal" id="Ls5-S3-Nld"/>
+                        <segue destination="VCs-0U-3gH" kind="push" identifier="tour_segue" id="Aek-JL-lDu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="458" y="728"/>
         </scene>
-        <!--View Controller-->
+        <!--Tour View Controller - Tour Details-->
         <scene sceneID="uQh-59-9mF">
             <objects>
-                <viewController id="VCs-0U-3gH" sceneMemberID="viewController">
+                <viewController id="VCs-0U-3gH" customClass="TSTourViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UxT-UV-Abv">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="vNd-01-Jr7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ImageViewDarken@2x.png" id="DC9-XQ-Cbv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="A Tour" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pRU-zD-lbg">
+                                <rect key="frame" x="14" y="182" width="293" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Category of Tour" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UrC-VU-lIV">
+                                <rect key="frame" x="14" y="211" width="293" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ARV-ew-aN1">
+                                <rect key="frame" x="14" y="270" width="183" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Take Tour">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gHm-a3-Tyb" kind="modal" id="vhN-Gr-NpH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="OZ5-9R-X8b"/>
+                    <navigationItem key="navigationItem" title="Tour Details" id="OZ5-9R-X8b"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tourCategoryLabel" destination="UrC-VU-lIV" id="Gp9-3G-Bvc"/>
+                        <outlet property="tourNameLabel" destination="pRU-zD-lbg" id="0lO-ic-CQA"/>
+                        <outlet property="tourPhotoImageView" destination="vNd-01-Jr7" id="ONA-ej-Qjq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g06-tW-JwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="950" y="728"/>
+        </scene>
+        <!--Tour Location View Controller-->
+        <scene sceneID="Fdx-zI-OWb">
+            <objects>
+                <viewController id="JHE-cu-AtE" customClass="TSTourLocationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7T9-YO-4DT">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="URl-0F-OMP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="D21-Nf-Uke">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="165"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    </mapView>
+                                    <view contentMode="scaleToFill" id="In6-Y1-mTc">
+                                        <rect key="frame" x="0.0" y="163" width="320" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="bAf-3C-L9b">
+                                        <rect key="frame" x="0.0" y="163" width="320" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    </scrollView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ImageViewDarken@2x.png" id="8Gp-8X-VfV">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="165"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Location Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fUt-7n-B1O">
+                                        <rect key="frame" x="9" y="126" width="293" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="TKC-Ak-qIE">
+                                        <rect key="frame" x="9" y="277" width="302" height="134"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.43704161349999998" green="0.43704161349999998" blue="0.43704161349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0A9-e8-HJt">
+                                        <rect key="frame" x="0.0" y="46" width="58" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="40"/>
+                                        <size key="titleShadowOffset" width="0.0" height="1"/>
+                                        <state key="normal" title="&lt;">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backPressed:" destination="JHE-cu-AtE" eventType="touchUpInside" id="D3s-Kv-V8Y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nge-9H-Uox">
+                                        <rect key="frame" x="262" y="46" width="58" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="40"/>
+                                        <size key="titleShadowOffset" width="0.0" height="1"/>
+                                        <state key="normal" title=">">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="forwardPressed:" destination="JHE-cu-AtE" eventType="touchUpInside" id="9GI-TN-AZH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92444595025510201" green="0.92444595025510201" blue="0.92444595025510201" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wME-d9-F4q">
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="VxD-tu-AvI">
+                            <connections>
+                                <action selector="donePressed:" destination="JHE-cu-AtE" id="LnA-wU-r4p"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="S9h-hL-TfZ">
+                            <connections>
+                                <segue destination="JHE-cu-AtE" kind="push" identifier="next_location" id="sCc-0L-Qnq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="descriptionText" destination="TKC-Ak-qIE" id="7oW-Ia-9C0"/>
+                        <outlet property="leftButton" destination="0A9-e8-HJt" id="MWw-bx-FAm"/>
+                        <outlet property="locationNameLabel" destination="fUt-7n-B1O" id="EFO-om-0Xd"/>
+                        <outlet property="mapView" destination="D21-Nf-Uke" id="GcP-D0-KH2"/>
+                        <outlet property="photosScrollView" destination="bAf-3C-L9b" id="tqm-2E-7zu"/>
+                        <outlet property="rightButton" destination="nge-9H-Uox" id="e59-nC-6BF"/>
+                        <outlet property="scrollViewBackground" destination="In6-Y1-mTc" id="92c-9A-5T8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fco-43-iWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005" y="728"/>
         </scene>
         <!--Create Tour View Controller - Add Tour-->
         <scene sceneID="uSv-Nb-E7u">
             <objects>
                 <viewController id="7rg-Fq-RGa" customClass="TSCreateTourViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xnx-Gg-5di">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="fFW-lE-l1R">
@@ -79,14 +238,30 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qh9-pb-4Jp" customClass="TPKeyboardAvoidingScrollView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" id="Lad-ER-0Og" customClass="RCTextView">
-                                        <rect key="frame" x="50" y="48" width="220" height="44"/>
+                                    <view contentMode="scaleToFill" id="dpy-qz-7Y3" customClass="RCTextView">
+                                        <rect key="frame" x="50" y="103" width="220" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" id="hQE-qa-kxm">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Category" minimumFontSize="17" clearButtonMode="whileEditing" id="cTv-Er-Bjj">
+                                                <rect key="frame" x="10" y="4" width="201" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done"/>
+                                                <connections>
+                                                    <action selector="removeCategoryKeyboard:" destination="sf3-wo-r63" eventType="editingDidEndOnExit" id="yjZ-Vr-aoX"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="Lad-ER-0Og" customClass="RCTextView">
+                                        <rect key="frame" x="50" y="28" width="220" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" clearButtonMode="whileEditing" id="hQE-qa-kxm">
                                                 <rect key="frame" x="11" y="0.0" width="199" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" returnKeyType="done"/>
@@ -98,57 +273,8 @@
                                             <outlet property="textField" destination="hQE-qa-kxm" id="ePG-mv-irY"/>
                                         </connections>
                                     </view>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="88E-de-T7a">
-                                        <rect key="frame" x="21" y="7" width="278" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <size key="shadowOffset" width="0.0" height="1"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="871-wi-mXo">
-                                        <rect key="frame" x="21" y="106" width="278" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <size key="shadowOffset" width="0.0" height="1"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Uh-aI-GVd">
-                                        <rect key="frame" x="21" y="268" width="278" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <size key="shadowOffset" width="0.0" height="1"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" id="M2i-Mn-PHI" customClass="RCTextView">
-                                        <rect key="frame" x="50" y="148" width="220" height="112"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.70000000000000007" contentMode="left" text="140" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ELr-4W-ElW">
-                                                <rect key="frame" x="174" y="89" width="42" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="XwK-ms-MLd">
-                                                <rect key="frame" x="0.0" y="0.0" width="220" height="112"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
-                                            </textView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                        <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SVx-au-kA5">
-                                        <rect key="frame" x="56" y="365" width="208" height="44"/>
+                                        <rect key="frame" x="56" y="353" width="208" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Go!">
@@ -163,7 +289,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mfl-AN-fZm">
-                                        <rect key="frame" x="108" y="306" width="105" height="44"/>
+                                        <rect key="frame" x="108" y="223" width="105" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Take Photo">
@@ -180,13 +306,13 @@
                                 </subviews>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92444595029999999" green="0.92444595029999999" blue="0.92444595029999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Tour" id="2zU-yh-0sE"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="descriptionTextView" destination="XwK-ms-MLd" id="aA9-uf-P5v"/>
+                        <outlet property="descriptionTextView" destination="cTv-Er-Bjj" id="Wg6-Nf-RMl"/>
                         <outlet property="imageView" destination="fFW-lE-l1R" id="HO6-9j-mqC"/>
-                        <outlet property="lettersRemainingLabel" destination="ELr-4W-ElW" id="A0U-Y7-gNS"/>
                         <outlet property="nameTextField" destination="hQE-qa-kxm" id="E37-Co-Mu7"/>
                     </connections>
                 </viewController>
@@ -199,7 +325,7 @@
             <objects>
                 <viewController id="sf3-wo-r63" customClass="TSAddLocationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N8P-uS-jb0">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="Khl-vj-YH2">
@@ -207,7 +333,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jtD-xl-GOU">
-                                <rect key="frame" x="72" y="311" width="176" height="44"/>
+                                <rect key="frame" x="72" y="305" width="176" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Mark it!">
@@ -222,7 +348,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="xuv-Db-OGH" customClass="RCTextView">
-                                <rect key="frame" x="9" y="67" width="182" height="36"/>
+                                <rect key="frame" x="8" y="112" width="182" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location Name" minimumFontSize="17" clearButtonMode="whileEditing" id="sAk-eD-pHF">
@@ -240,47 +366,35 @@
                                     <outlet property="textField" destination="sAk-eD-pHF" id="L5p-0U-gcI"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" id="KrV-dE-Fnl" customClass="RCTextView">
-                                <rect key="frame" x="9" y="111" width="182" height="36"/>
+                            <view contentMode="scaleToFill" id="uCO-bL-Q5X" customClass="RCTextView">
+                                <rect key="frame" x="50" y="179" width="220" height="112"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Category" minimumFontSize="17" clearButtonMode="whileEditing" id="aNg-VK-cK0">
-                                        <rect key="frame" x="10" y="0.0" width="162" height="36"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" text="140" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eZQ-Wb-fV7">
+                                        <rect key="frame" x="174" y="89" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="LwS-Z1-O6g">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done"/>
-                                        <connections>
-                                            <action selector="removeCategoryKeyboard:" destination="sf3-wo-r63" eventType="editingDidEndOnExit" id="904-DX-yYg"/>
-                                        </connections>
-                                    </textField>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                                <connections>
-                                    <outlet property="textField" destination="aNg-VK-cK0" id="cAG-T0-A0s"/>
-                                </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VCJ-Vx-QOd">
-                                <rect key="frame" x="227" y="194" width="73" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="cameraButton:" destination="sf3-wo-r63" eventType="touchUpInside" id="RmT-kB-46f"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92444595029999999" green="0.92444595029999999" blue="0.92444595029999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="Qm8-MB-kCq"/>
                     <connections>
-                        <outlet property="cameraButton" destination="VCJ-Vx-QOd" id="0fk-mO-OhQ"/>
-                        <outlet property="categoryTextField" destination="aNg-VK-cK0" id="VAi-Tj-qux"/>
+                        <outlet property="categoryTextField" destination="LwS-Z1-O6g" id="1QH-P7-yTX"/>
+                        <outlet property="lettersRemainingLabel" destination="eZQ-Wb-fV7" id="e6P-aK-0fa"/>
                         <outlet property="locationNameTextField" destination="sAk-eD-pHF" id="1Bg-aK-D79"/>
                         <outlet property="mapView" destination="Khl-vj-YH2" id="EmA-BC-jSI"/>
                     </connections>
@@ -325,9 +439,28 @@
             </objects>
             <point key="canvasLocation" x="-68" y="1518"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QqR-pm-alF">
+            <objects>
+                <navigationController id="gHm-a3-Tyb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qDP-Rf-2ol">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JHE-cu-AtE" kind="relationship" relationship="rootViewController" id="wri-g3-06Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Azt-4a-A1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1464" y="684"/>
+        </scene>
     </scenes>
     <resources>
         <image name="71-compass.png" width="24" height="24"/>
+        <image name="ImageViewDarken@2x.png" width="640" height="304"/>
     </resources>
     <classes>
         <class className="RCTextView" superclassName="UIView">
@@ -342,10 +475,9 @@
         <class className="TSAddLocationViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TSAddLocationViewController.h"/>
             <relationships>
-                <relationship kind="action" name="cameraButton:" candidateClass="UIButton"/>
-                <relationship kind="action" name="removeKeyboard:"/>
                 <relationship kind="outlet" name="cameraButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="categoryTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="categoryTextField" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="lettersRemainingLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="locationNameTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
             </relationships>
@@ -353,16 +485,33 @@
         <class className="TSCreateTourViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TSCreateTourViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="lettersRemainingLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="TSTourLocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TSTourLocationViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="descriptionText" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="locationNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="photosScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="rightButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="scrollViewBackground" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="TSTourViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TSTourViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tourCategoryLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tourNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tourPhotoImageView" candidateClass="UIImageView"/>
             </relationships>
         </class>
         <class className="TSViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TSViewController.h"/>
             <relationships>
-                <relationship kind="action" name="trackPressed:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="toursMapView" candidateClass="MKMapView"/>
                 <relationship kind="outlet" name="toursTableView" candidateClass="UITableView"/>
             </relationships>
@@ -374,6 +523,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="wri-g3-06Z"/>
         <segue reference="Gm2-sa-y8e"/>
     </inferredMetricsTieBreakers>
 </document>

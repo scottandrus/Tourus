@@ -43,6 +43,7 @@
     
     // Set up interface
     [self setupUserInterface];
+    [self.locManager startUpdatingLocation];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,7 +56,6 @@
 
 - (void)setupUserInterface {
     
-    self.descriptionTextView.delegate = self;
     
     // Custom left bar-button item
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"TSBackButton"] style:UIBarButtonItemStylePlain target:self action:@selector(cancelPressed)];
@@ -85,13 +85,6 @@
     }
 }
 
-#pragma mark - UITextViewDelegate
-
-- (void)textViewDidChange:(UITextView *)textView {
-    self.lettersRemaining = 140 - textView.text.length;
-    self.lettersRemainingLabel.text =
-    [NSString stringWithFormat:@"%d", self.lettersRemaining];
-}
 
 #pragma mark - UIStoryboardMethods
 
@@ -101,6 +94,7 @@
     tsalvc.tour.tourName = self.nameTextField.text;
     tsalvc.tour.tourDescription = self.descriptionTextView.text;
     tsalvc.tour.tourPhoto = self.imageView.image;
+    tsalvc.tour.markingLocation = self.locManager.location;
     tsalvc.tsvc = self.tsvc;
 }
 

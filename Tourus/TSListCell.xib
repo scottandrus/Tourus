@@ -76,7 +76,7 @@
 										<int key="IBUIContentMode">7</int>
 										<bool key="IBUIUserInteractionEnabled">NO</bool>
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-										<string key="IBUIText">0.2</string>
+										<string key="IBUIText">&lt; 5</string>
 										<object class="NSColor" key="IBUITextColor" id="532377378">
 											<int key="NSColorSpace">3</int>
 											<bytes key="NSWhite">MC4zMzMzMzMzMzMzAA</bytes>
@@ -108,6 +108,7 @@
 										<string key="NSFrame">{{255, 21}, {42, 23}}</string>
 										<reference key="NSSuperview" ref="656274895"/>
 										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView"/>
 										<bool key="IBUIOpaque">NO</bool>
 										<bool key="IBUIClipsSubviews">YES</bool>
 										<int key="IBUIContentMode">7</int>
@@ -1242,17 +1243,6 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">TSListCell</string>
 					<string key="superclassName">UITableViewCell</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">goToPressed:</string>
-						<string key="NS.object.0">UIButton</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">goToPressed:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">goToPressed:</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="categoryLabel">UILabel</string>
 						<string key="cellBg">UIView</string>

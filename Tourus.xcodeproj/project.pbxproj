@@ -16,6 +16,12 @@
 		D25B31FC1708911B00092AD4 /* vanderbilt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25B31FB1708911B00092AD4 /* vanderbilt.jpg */; };
 		D25B31FE170899E600092AD4 /* parthenon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25B31FD170899E600092AD4 /* parthenon.jpg */; };
 		D25B320017089BFC00092AD4 /* musicrow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25B31FF17089BFC00092AD4 /* musicrow.jpg */; };
+		D25B32031708A02400092AD4 /* TSTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D25B32021708A02400092AD4 /* TSTourViewController.m */; };
+		D25B32061708B29400092AD4 /* ImageViewDarken@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D25B32051708B29400092AD4 /* ImageViewDarken@2x.png */; };
+		D25B32091708BCFE00092AD4 /* TSTourLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D25B32081708BCFE00092AD4 /* TSTourLocationViewController.m */; };
+		D25B320B1708CA4400092AD4 /* TourusIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D25B320A1708CA4400092AD4 /* TourusIcon@2x.png */; };
+		D25B32101708E6F700092AD4 /* TSMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D25B320E1708E6F600092AD4 /* TSMenuViewController.m */; };
+		D25B32111708E6F700092AD4 /* TSMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D25B320F1708E6F700092AD4 /* TSMenuViewController.xib */; };
 		D268B8821707C8FD00CC90C1 /* TSAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D268B8811707C8FD00CC90C1 /* TSAnnotation.m */; };
 		D268B8841707CBA600CC90C1 /* TSListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D268B8831707CBA600CC90C1 /* TSListCell.xib */; };
 		D268B8871707CBBE00CC90C1 /* 113-navigation.png in Resources */ = {isa = PBXBuildFile; fileRef = D268B8851707CBBE00CC90C1 /* 113-navigation.png */; };
@@ -81,6 +87,15 @@
 		D25B31FB1708911B00092AD4 /* vanderbilt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vanderbilt.jpg; sourceTree = "<group>"; };
 		D25B31FD170899E600092AD4 /* parthenon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = parthenon.jpg; sourceTree = "<group>"; };
 		D25B31FF17089BFC00092AD4 /* musicrow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = musicrow.jpg; sourceTree = "<group>"; };
+		D25B32011708A02400092AD4 /* TSTourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTourViewController.h; sourceTree = "<group>"; };
+		D25B32021708A02400092AD4 /* TSTourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTourViewController.m; sourceTree = "<group>"; };
+		D25B32051708B29400092AD4 /* ImageViewDarken@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ImageViewDarken@2x.png"; sourceTree = "<group>"; };
+		D25B32071708BCFE00092AD4 /* TSTourLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTourLocationViewController.h; sourceTree = "<group>"; };
+		D25B32081708BCFE00092AD4 /* TSTourLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTourLocationViewController.m; sourceTree = "<group>"; };
+		D25B320A1708CA4400092AD4 /* TourusIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TourusIcon@2x.png"; sourceTree = "<group>"; };
+		D25B320D1708E6F600092AD4 /* TSMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMenuViewController.h; sourceTree = "<group>"; };
+		D25B320E1708E6F600092AD4 /* TSMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMenuViewController.m; sourceTree = "<group>"; };
+		D25B320F1708E6F700092AD4 /* TSMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSMenuViewController.xib; sourceTree = "<group>"; };
 		D268B8801707C8FD00CC90C1 /* TSAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAnnotation.h; sourceTree = "<group>"; };
 		D268B8811707C8FD00CC90C1 /* TSAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAnnotation.m; sourceTree = "<group>"; };
 		D268B8831707CBA600CC90C1 /* TSListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSListCell.xib; sourceTree = "<group>"; };
@@ -199,9 +214,38 @@
 			name = TSAddLocationViewController;
 			sourceTree = "<group>";
 		};
+		D25B32041708A02B00092AD4 /* TSTourViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D25B32011708A02400092AD4 /* TSTourViewController.h */,
+				D25B32021708A02400092AD4 /* TSTourViewController.m */,
+			);
+			name = TSTourViewController;
+			sourceTree = "<group>";
+		};
+		D25B320C1708E69200092AD4 /* TSTourLocationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D25B32071708BCFE00092AD4 /* TSTourLocationViewController.h */,
+				D25B32081708BCFE00092AD4 /* TSTourLocationViewController.m */,
+			);
+			name = TSTourLocationViewController;
+			sourceTree = "<group>";
+		};
+		D25B32121708E6FD00092AD4 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				D25B320D1708E6F600092AD4 /* TSMenuViewController.h */,
+				D25B320E1708E6F600092AD4 /* TSMenuViewController.m */,
+				D25B320F1708E6F700092AD4 /* TSMenuViewController.xib */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
 		D293749B170621B000FF0758 = {
 			isa = PBXGroup;
 			children = (
+				D25B320A1708CA4400092AD4 /* TourusIcon@2x.png */,
 				D29374AD170621B000FF0758 /* Tourus */,
 				D29374A6170621B000FF0758 /* Frameworks */,
 				D29374A5170621B000FF0758 /* Products */,
@@ -322,6 +366,9 @@
 				D2C12D031706A7F40054F500 /* TSViewController */,
 				D2C12D051706A8060054F500 /* TSCreateTourViewController */,
 				D219F797170741F200577C51 /* TSAddLocationViewController */,
+				D25B32041708A02B00092AD4 /* TSTourViewController */,
+				D25B320C1708E69200092AD4 /* TSTourLocationViewController */,
+				D25B32121708E6FD00092AD4 /* Menu */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -356,6 +403,7 @@
 		D2C12D151706B06E0054F500 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D25B32051708B29400092AD4 /* ImageViewDarken@2x.png */,
 				D25B31FF17089BFC00092AD4 /* musicrow.jpg */,
 				D25B31FD170899E600092AD4 /* parthenon.jpg */,
 				D25B31FB1708911B00092AD4 /* vanderbilt.jpg */,
@@ -505,6 +553,9 @@
 				D25B31FC1708911B00092AD4 /* vanderbilt.jpg in Resources */,
 				D25B31FE170899E600092AD4 /* parthenon.jpg in Resources */,
 				D25B320017089BFC00092AD4 /* musicrow.jpg in Resources */,
+				D25B32061708B29400092AD4 /* ImageViewDarken@2x.png in Resources */,
+				D25B320B1708CA4400092AD4 /* TourusIcon@2x.png in Resources */,
+				D25B32111708E6F700092AD4 /* TSMenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +586,9 @@
 				D219F79A1707422500577C51 /* TSAddLocationViewController.m in Sources */,
 				D268B8821707C8FD00CC90C1 /* TSAnnotation.m in Sources */,
 				D268B88B1707CC1800CC90C1 /* TSListCell.m in Sources */,
+				D25B32031708A02400092AD4 /* TSTourViewController.m in Sources */,
+				D25B32091708BCFE00092AD4 /* TSTourLocationViewController.m in Sources */,
+				D25B32101708E6F700092AD4 /* TSMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +691,7 @@
 				GCC_PREFIX_HEADER = "Tourus/Tourus-Prefix.pch";
 				INFOPLIST_FILE = "Tourus/Tourus-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -652,6 +707,7 @@
 				GCC_PREFIX_HEADER = "Tourus/Tourus-Prefix.pch";
 				INFOPLIST_FILE = "Tourus/Tourus-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

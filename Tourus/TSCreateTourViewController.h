@@ -12,13 +12,12 @@
 
 @interface TSCreateTourViewController : UIViewController <UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
-@property (assign, nonatomic) NSInteger lettersRemaining;
+
 @property (strong, nonatomic) NSArray *tourList;
 @property (strong, nonatomic) TSViewController *tsvc;
+@property (strong, nonatomic) CLLocationManager *locManager;
 
-// IBOutlets
-@property (strong, nonatomic) IBOutlet UILabel *lettersRemainingLabel;
-@property (strong, nonatomic) IBOutlet UITextView *descriptionTextView;
+@property (strong, nonatomic) IBOutlet UITextField *descriptionTextView;
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 

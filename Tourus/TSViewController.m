@@ -18,6 +18,7 @@
 
 // View Controllers
 #import "TSCreateTourViewController.h"
+#import "TSTourViewController.h"
 
 // Model Objects
 #import "TSTour.h"
@@ -29,6 +30,7 @@
 
 // Macros
 #define kAddTourSegue @"add_tour_segue"
+#define kTourSegue @"tour_segue"
 #define kCellIdentifier @"cell_identifier"
 
 @interface TSViewController ()
@@ -71,9 +73,35 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    // Add Nav Bar text
+    if (!self.navBarText) self.navBarText = [[UIImageView alloc] initWithImage:
+                                             [UIImage imageNamed:@"TourusNavBarText"]];
+    if (![self.navigationController.navigationBar.subviews containsObject:self.navBarText]) {
+        [self.navigationController.navigationBar addSubview:self.navBarText];
+    }
+    
+    [self.sVC setLocked:NO];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self.toursTableView reloadData];
+    for (id<MKAnnotation> anno in self.toursMapView.annotations) {
+        [self.toursMapView removeAnnotation:anno];
+    }
+    
+    for (TSTour *tour in self.tourList) {
+        TSAnnotation *annotation = [[TSAnnotation alloc] initWithTitle:tour.tourName subtitle:tour.tourDescription andCoordinate:tour.markingLocation.coordinate];
+        [self.toursMapView addAnnotation:annotation];
+        tour.annotation = annotation;
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.sVC setLocked:YES];
 }
 
 #pragma mark - Dummy Data
@@ -155,11 +183,6 @@
     
     self.toursTableView.dataSource = self;
     
-    // Add Nav Bar text
-    [self.navigationController.navigationBar addSubview:
-     [[UIImageView alloc] initWithImage:
-      [UIImage imageNamed:@"TourusNavBarText"]]];
-    
     // Custom right bar-button item
     self.navigationItem.rightBarButtonItem =
     [UIBarButtonItem barButtonWithImage:
@@ -193,7 +216,7 @@
 
 - (void)setupMap {
     self.toursMapView.userTrackingMode = MKUserTrackingModeFollow;
-    [self.toursMapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake(self.toursMapView.userLocation.location.coordinate.latitude, self.toursMapView.userLocation.location.coordinate.longitude), MKCoordinateSpanMake(.002, .002)) animated:YES];
+    [self.toursMapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake(self.toursMapView.userLocation.location.coordinate.latitude, self.toursMapView.userLocation.location.coordinate.longitude), MKCoordinateSpanMake(1, 1)) animated:YES];
     
     for (TSTour *tour in self.tourList) {
         TSAnnotation *annotation = [[TSAnnotation alloc] initWithTitle:tour.tourName subtitle:tour.tourDescription andCoordinate:tour.markingLocation.coordinate];
@@ -224,6 +247,38 @@
     else if (self.toursMapView.userTrackingMode == MKUserTrackingModeFollowWithHeading) [self.toursMapView setUserTrackingMode:MKUserTrackingModeNone animated:YES];
 }
 
+#pragma mark - MKMapViewDelegate methods
+
+// mapView:viewForAnnotation: provides the view for each annotation.
+// This method may be called for all or some of the added annotations.
+// For MapKit provided annotations (eg. MKUserLocation) return nil to use the MapKit provided annotation view.
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+    static NSString *identifier = @"Location";
+    if ([annotation isKindOfClass:[TSAnnotation class]]) {
+        MKPinAnnotationView *annotationView = (MKPinAnnotationView *) [self.toursMapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+        if (!annotationView) {
+            annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+            annotationView.enabled = YES;
+            annotationView.canShowCallout = YES;
+            annotationView.animatesDrop = YES;
+            
+            //instatiate a detail-disclosure button and set it to appear on right side of annotation
+//            UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            //annoView.leftCalloutAccessoryView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+//            annotationView.rightCalloutAccessoryView = infoButton;
+        } else {
+            annotationView.annotation = annotation;
+        }
+        return annotationView;
+    }
+    
+    return nil;
+}
+
+//- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+//    [self performSegueWithIdentifier:@"Detail" sender:[(TSAnnotation *)view.annotation idNum]];
+//}
+
 #pragma mark - Utility methods
 
 
@@ -233,6 +288,13 @@
     if ([segue.identifier isEqualToString:kAddTourSegue]) {
         TSCreateTourViewController *tsctvc = (TSCreateTourViewController *)[segue.destinationViewController topViewController];
         tsctvc.tsvc = self;
+    } if ([segue.identifier isEqualToString:kTourSegue]) {
+        TSTourViewController *tstvc = (TSTourViewController *)segue.destinationViewController;
+        if ([sender isKindOfClass:[TSListCell class]]) {
+            TSListCell *selectedCell = sender;
+            tstvc.tour = [self.tourList objectAtIndex:[self.toursTableView indexPathForCell:selectedCell].row];
+        }
+        [self.navBarText removeFromSuperview];
     }
 }
 
@@ -275,6 +337,12 @@
 //    [SAViewManipulator addBorderToView:sHV withWidth:1 color:[UIColor lightGrayColor] andRadius:0];
 //    return sHV;
 //}
+
+// Called after the user changes the selection.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:kTourSegue sender:[tableView cellForRowAtIndexPath:indexPath]];
+    
+}
 
 #pragma mark - UIScrollViewDelegate
 

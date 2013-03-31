@@ -55,6 +55,8 @@
 
 - (void)setupUserInterface {
     
+    self.categoryTextField.delegate = self;
+    
     // Title
     self.title = [NSString stringWithFormat:@"Location %d", self.tour.tourLocations.count+1];
     
@@ -74,44 +76,49 @@
 #pragma mark - Actions
 
 - (void)donePressed {
-    PFObject *pfTour = [PFObject objectWithClassName:@"TSTour"];
-    NSData *imageData = UIImagePNGRepresentation(self.tour.tourPhoto);
-    PFFile *photoFile = [PFFile fileWithName:[NSString stringWithFormat:@"%@_photo.png", self.tour.tourName] data:imageData];
+//    PFObject *pfTour = [PFObject objectWithClassName:@"TSTour"];
+//    NSData *imageData = UIImagePNGRepresentation(self.tour.tourPhoto);
+//    PFFile *photoFile = [PFFile fileWithName:[NSString stringWithFormat:@"%@_photo.png", self.tour.tourName] data:imageData];
+//    
+//    PFGeoPoint *markingPoint = [PFGeoPoint geoPointWithLocation:self.tour.markingLocation];
+//    
+//    PFUser *user = [PFUser currentUser];
+//    PFRelation *locationsRelation = [pfTour relationforKey:@"locations"];
+//    
+//    PFObject *pfTourLocation;
+//    for (TSTourLocation *location in self.tour.tourLocations) {
+//        pfTourLocation = [PFObject objectWithClassName:@"TSTourLocation"];
+//        
+//        [pfTourLocation setObject:[PFGeoPoint geoPointWithLocation:location.loc] forKey:@"loc"];
+//        [pfTourLocation setObject:location.title forKey:@"title"];
+//        [pfTourLocation setObject:location.locDescription forKey:@"locDescription"];
+//        [pfTourLocation setObject:location.videoLink forKey:@"videoLink"];
+//        PFRelation *photosRelation = [pfTourLocation relationforKey:@"photos"];
+//        int i = 0;
+//        for (UIImage *photo in location.photos) {
+//            i++;
+//            PFFile *locPhotoFile = [PFFile fileWithName:[NSString stringWithFormat:@"%@_locphoto_%d.png", self.tour.tourName, i] data:imageData];
+//            PFObject *photoObject = [PFObject objectWithClassName:@"TSLocationPhoto"];
+//            [photoObject setObject:locPhotoFile forKey:@"locPhotoFile"];
+//            [photosRelation addObject:photoObject];
+//        }
+//        [locationsRelation addObject:pfTourLocation];
+//    }
+//    
+//    [user saveInBackground];
+//    
+//    [pfTour setObject:self.tour.tourName forKey:@"tourName"];
+//    [pfTour setObject:self.tour.createdBy forKey:@"createdBy"];
+//    [pfTour setObject:photoFile forKey:@"tourPhoto"];
+//    [pfTour setObject:markingPoint forKey:@"markingLocation"];
+//    
+//    [pfTour save];
     
-    PFGeoPoint *markingPoint = [PFGeoPoint geoPointWithLocation:self.tour.markingLocation];
+    self.tour.markingLocation = self.thisLocation.loc;
     
-    PFUser *user = [PFUser currentUser];
-    PFRelation *locationsRelation = [pfTour relationforKey:@"locations"];
-    
-    PFObject *pfTourLocation;
-    for (TSTourLocation *location in self.tour.tourLocations) {
-        pfTourLocation = [PFObject objectWithClassName:@"TSTourLocation"];
-        
-        [pfTourLocation setObject:[PFGeoPoint geoPointWithLocation:location.loc] forKey:@"loc"];
-        [pfTourLocation setObject:location.title forKey:@"title"];
-        [pfTourLocation setObject:location.locDescription forKey:@"locDescription"];
-        [pfTourLocation setObject:location.videoLink forKey:@"videoLink"];
-        PFRelation *photosRelation = [pfTourLocation relationforKey:@"photos"];
-        int i = 0;
-        for (UIImage *photo in location.photos) {
-            i++;
-            PFFile *locPhotoFile = [PFFile fileWithName:[NSString stringWithFormat:@"%@_locphoto_%d.png", self.tour.tourName, i] data:imageData];
-            PFObject *photoObject = [PFObject objectWithClassName:@"TSLocationPhoto"];
-            [photoObject setObject:locPhotoFile forKey:@"locPhotoFile"];
-            [photosRelation addObject:photoObject];
-        }
-        [locationsRelation addObject:pfTourLocation];
-    }
-    
-    [user saveInBackground];
-    
-    [pfTour setObject:self.tour.tourName forKey:@"tourName"];
-    [pfTour setObject:self.tour.createdBy forKey:@"createdBy"];
-    [pfTour setObject:photoFile forKey:@"tourPhoto"];
-    [pfTour setObject:markingPoint forKey:@"markingLocation"];
-    
-    [pfTour save];
-    
+    NSMutableArray *mutTours = [self.tsvc.tourList mutableCopy];
+    [mutTours addObject:self.tour];
+    self.tsvc.tourList = [mutTours copy];
     [self.navigationController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 
 }
@@ -142,18 +149,40 @@
     }
 }
 
+#pragma mark - UITextViewDelegate
+
+- (void)textViewDidChange:(UITextView *)textView {
+    self.lettersRemaining = 140 - textView.text.length;
+    self.lettersRemainingLabel.text =
+    [NSString stringWithFormat:@"%d", self.lettersRemaining];
+}
+
+// http://stackoverflow.com/questions/6411858/uitextview-resign-first-responder-on-done
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range
+ replacementText:(NSString *)text
+{
+    
+    if ([text isEqualToString:@"\n"]) {
+        
+        [textView resignFirstResponder];
+        // Return FALSE so that the final '\n' character doesn't get added
+        return NO;
+    }
+    // For any other character return TRUE so that the text gets added to the view
+    return YES;
+}
 
 #pragma mark - UIStoryboardMethods
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    self.thisLocation.loc = self.locManager.location;
+    self.thisLocation.loc = self.mapView.userLocation.location;
     [self.locManager stopUpdatingLocation];
     self.thisLocation.title = self.locationNameTextField.text;
     self.thisLocation.locDescription = self.categoryTextField.text;
     
     TSAddLocationViewController *tsalvc = segue.destinationViewController;
     NSMutableArray *mutLocs = [self.tour.tourLocations mutableCopy];
-    [mutLocs addObject:self.tour];
+    [mutLocs addObject:self.thisLocation];
     self.tour.tourLocations = [mutLocs copy];
     tsalvc.tour = self.tour;
     tsalvc.tsvc = self.tsvc;

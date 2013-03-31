@@ -19,6 +19,9 @@
 
 @property (strong, nonatomic) JSSlidingViewController *sVC;
 
+@property BOOL shouldZoomMap;
+@property CGFloat previousSize;
+
 // Data source
 @property (strong, nonatomic) NSArray *tourList;
 

@@ -11,6 +11,7 @@
 // Categories
 #import "UIImage+Color.h"
 #import "UIBarButtonItem+Custom.h"
+#import "UIView+Frame.h"
 
 // Utilities
 #import "SAViewManipulator.h"
@@ -58,6 +59,7 @@
     
     // Set up user interface
     [self setupUserInterface];
+    [self setupMap];
 }
 
 - (void)didReceiveMemoryWarning
@@ -97,6 +99,16 @@
                                   style:UIBarButtonItemStylePlain
                                  target:self
                                  action:@selector(menuPressed)];
+    
+    self.toursTableView.delegate = self;
+    self.previousSize = 0;
+}
+
+#pragma mark - Map Methods
+
+- (void)setupMap {
+    self.toursMapView.userTrackingMode = MKUserTrackingModeFollow;
+    [self.toursMapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake(self.toursMapView.userLocation.location.coordinate.latitude, self.toursMapView.userLocation.location.coordinate.longitude), MKCoordinateSpanMake(.002, .002)) animated:YES];
 }
 
 #pragma mark - Actions
@@ -144,5 +156,18 @@
     
     return cell;
 }
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (self.toursTableView.contentOffset.y < 0) {
+        int difference = self.previousSize - self.toursTableView.contentOffset.y;
+        self.toursMapView.height += difference;
+        self.toursMapView.left -= difference/2.0;
+        self.toursMapView.width += difference/2.0;
+        self.previousSize = self.toursTableView.contentOffset.y;
+        
+    }
+} // any offset changes
 
 @end

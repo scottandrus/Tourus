@@ -10,7 +10,7 @@
 
 #import "TSViewController.h"
 
-@interface TSCreateTourViewController : UIViewController <UITextViewDelegate>
+@interface TSCreateTourViewController : UIViewController <UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (assign, nonatomic) NSInteger lettersRemaining;
 @property (strong, nonatomic) NSArray *tourList;
@@ -20,5 +20,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *lettersRemainingLabel;
 @property (strong, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

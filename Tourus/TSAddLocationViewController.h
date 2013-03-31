@@ -28,5 +28,4 @@
 @property (strong, nonatomic) IBOutlet UIButton *cameraButton;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
-
 @end

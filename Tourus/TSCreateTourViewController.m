@@ -14,6 +14,9 @@
 // View Controllers
 #import "TSAddLocationViewController.h"
 
+// Utilities
+#import "SAViewManipulator.h"
+
 // Categories
 #import "UIImage+Color.h"
 #import "UIBarButtonItem+Custom.h"
@@ -56,12 +59,30 @@
     
     // Custom left bar-button item
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"TSBackButton"] style:UIBarButtonItemStylePlain target:self action:@selector(cancelPressed)];
+    [SAViewManipulator setGradientBackgroundImageForView:self.view withTopColor:nil andBottomColor:nil];
 }
 
 #pragma mark - Actions
 
 - (void)cancelPressed {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)cameraPressed:(UIButton *)sender {
+    if ([UIImagePickerController isSourceTypeAvailable:
+         UIImagePickerControllerSourceTypeCamera]) {
+        // Create image picker controller
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+        
+        // Set source to the camera
+        imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        // Delegate is self
+        imagePicker.delegate = self;
+        
+        // Show image picker
+        [self presentViewController:imagePicker animated:YES completion:nil];
+    }
 }
 
 #pragma mark - UITextViewDelegate
@@ -79,7 +100,23 @@
     tsalvc.tour = [TSTour new];
     tsalvc.tour.tourName = self.nameTextField.text;
     tsalvc.tour.tourDescription = self.descriptionTextView.text;
+    tsalvc.tour.tourPhoto = self.imageView.image;
     tsalvc.tsvc = self.tsvc;
+}
+
+#pragma mark - UIImagePickerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo NS_DEPRECATED_IOS(2_0, 3_0) {
+    
+    // Dismiss controller
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    // Add image;
+    if (self.imageView.hidden) {
+        self.imageView.hidden = NO;
+    }
+    self.imageView.image = image;
+    
 }
 
 @end

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
+#import "TSAnnotation.h"
+
 @interface TSTour : NSObject
 
 @property (strong, nonatomic) NSString *tourName;
@@ -18,5 +20,6 @@
 @property (strong, nonatomic) UIImage *tourPhoto;
 @property (strong, nonatomic) CLLocation *markingLocation;
 @property (strong, nonatomic) NSArray *tourLocations;
+@property (strong, nonatomic) TSAnnotation *annotation;
 
 @end

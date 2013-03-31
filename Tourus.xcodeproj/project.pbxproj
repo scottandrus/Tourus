@@ -13,6 +13,14 @@
 		D219F7911707339700577C51 /* frontViewControllerDropShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D219F78D1707339700577C51 /* frontViewControllerDropShadow@2x.png */; };
 		D219F7921707339700577C51 /* JSSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D219F78F1707339700577C51 /* JSSlidingViewController.m */; };
 		D219F79A1707422500577C51 /* TSAddLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D219F7991707422500577C51 /* TSAddLocationViewController.m */; };
+		D25B31FC1708911B00092AD4 /* vanderbilt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25B31FB1708911B00092AD4 /* vanderbilt.jpg */; };
+		D25B31FE170899E600092AD4 /* parthenon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25B31FD170899E600092AD4 /* parthenon.jpg */; };
+		D25B320017089BFC00092AD4 /* musicrow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25B31FF17089BFC00092AD4 /* musicrow.jpg */; };
+		D268B8821707C8FD00CC90C1 /* TSAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D268B8811707C8FD00CC90C1 /* TSAnnotation.m */; };
+		D268B8841707CBA600CC90C1 /* TSListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D268B8831707CBA600CC90C1 /* TSListCell.xib */; };
+		D268B8871707CBBE00CC90C1 /* 113-navigation.png in Resources */ = {isa = PBXBuildFile; fileRef = D268B8851707CBBE00CC90C1 /* 113-navigation.png */; };
+		D268B8881707CBBE00CC90C1 /* 113-navigation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D268B8861707CBBE00CC90C1 /* 113-navigation@2x.png */; };
+		D268B88B1707CC1800CC90C1 /* TSListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D268B88A1707CC1800CC90C1 /* TSListCell.m */; };
 		D29374A8170621B000FF0758 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29374A7170621B000FF0758 /* UIKit.framework */; };
 		D29374AA170621B000FF0758 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29374A9170621B000FF0758 /* Foundation.framework */; };
 		D29374AC170621B000FF0758 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29374AB170621B000FF0758 /* CoreGraphics.framework */; };
@@ -70,6 +78,16 @@
 		D219F78F1707339700577C51 /* JSSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSlidingViewController.m; sourceTree = "<group>"; };
 		D219F7981707422500577C51 /* TSAddLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAddLocationViewController.h; sourceTree = "<group>"; };
 		D219F7991707422500577C51 /* TSAddLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAddLocationViewController.m; sourceTree = "<group>"; };
+		D25B31FB1708911B00092AD4 /* vanderbilt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vanderbilt.jpg; sourceTree = "<group>"; };
+		D25B31FD170899E600092AD4 /* parthenon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = parthenon.jpg; sourceTree = "<group>"; };
+		D25B31FF17089BFC00092AD4 /* musicrow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = musicrow.jpg; sourceTree = "<group>"; };
+		D268B8801707C8FD00CC90C1 /* TSAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAnnotation.h; sourceTree = "<group>"; };
+		D268B8811707C8FD00CC90C1 /* TSAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAnnotation.m; sourceTree = "<group>"; };
+		D268B8831707CBA600CC90C1 /* TSListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSListCell.xib; sourceTree = "<group>"; };
+		D268B8851707CBBE00CC90C1 /* 113-navigation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "113-navigation.png"; sourceTree = "<group>"; };
+		D268B8861707CBBE00CC90C1 /* 113-navigation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "113-navigation@2x.png"; sourceTree = "<group>"; };
+		D268B8891707CC1800CC90C1 /* TSListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSListCell.h; sourceTree = "<group>"; };
+		D268B88A1707CC1800CC90C1 /* TSListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSListCell.m; sourceTree = "<group>"; };
 		D29374A4170621B000FF0758 /* Tourus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tourus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29374A7170621B000FF0758 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D29374A9170621B000FF0758 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -250,8 +268,13 @@
 		D2C12D031706A7F40054F500 /* TSViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D268B8831707CBA600CC90C1 /* TSListCell.xib */,
+				D268B8891707CC1800CC90C1 /* TSListCell.h */,
+				D268B88A1707CC1800CC90C1 /* TSListCell.m */,
 				D29374C5170621B000FF0758 /* TSViewController.h */,
 				D29374C6170621B000FF0758 /* TSViewController.m */,
+				D268B8801707C8FD00CC90C1 /* TSAnnotation.h */,
+				D268B8811707C8FD00CC90C1 /* TSAnnotation.m */,
 			);
 			name = TSViewController;
 			sourceTree = "<group>";
@@ -333,6 +356,11 @@
 		D2C12D151706B06E0054F500 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D25B31FF17089BFC00092AD4 /* musicrow.jpg */,
+				D25B31FD170899E600092AD4 /* parthenon.jpg */,
+				D25B31FB1708911B00092AD4 /* vanderbilt.jpg */,
+				D268B8851707CBBE00CC90C1 /* 113-navigation.png */,
+				D268B8861707CBBE00CC90C1 /* 113-navigation@2x.png */,
 				D2C12D141706B0660054F500 /* Nav Bar */,
 			);
 			name = Images;
@@ -471,6 +499,12 @@
 				D219F78B1706C7EA00577C51 /* TSBackButton@2x.png in Resources */,
 				D219F7901707339700577C51 /* frontViewControllerDropShadow.png in Resources */,
 				D219F7911707339700577C51 /* frontViewControllerDropShadow@2x.png in Resources */,
+				D268B8841707CBA600CC90C1 /* TSListCell.xib in Resources */,
+				D268B8871707CBBE00CC90C1 /* 113-navigation.png in Resources */,
+				D268B8881707CBBE00CC90C1 /* 113-navigation@2x.png in Resources */,
+				D25B31FC1708911B00092AD4 /* vanderbilt.jpg in Resources */,
+				D25B31FE170899E600092AD4 /* parthenon.jpg in Resources */,
+				D25B320017089BFC00092AD4 /* musicrow.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +533,8 @@
 				D2C12D461706BB240054F500 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				D219F7921707339700577C51 /* JSSlidingViewController.m in Sources */,
 				D219F79A1707422500577C51 /* TSAddLocationViewController.m in Sources */,
+				D268B8821707C8FD00CC90C1 /* TSAnnotation.m in Sources */,
+				D268B88B1707CC1800CC90C1 /* TSListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

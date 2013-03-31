@@ -12,7 +12,10 @@
 // Utilities
 #import "JSSlidingViewController.h"
 
-@interface TSViewController : UIViewController <MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource>
+// Views
+#import "TSListCell.h"
+
+@interface TSViewController : UIViewController <MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource, TSListCellDelegate>
 
 @property (strong, nonatomic) IBOutlet MKMapView *toursMapView;
 @property (strong, nonatomic) IBOutlet UITableView *toursTableView;

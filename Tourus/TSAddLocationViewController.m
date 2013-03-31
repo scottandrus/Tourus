@@ -116,6 +116,14 @@
 
 }
 
+- (IBAction)removeKeyboard:(id)sender {
+    [sender resignFirstResponder];
+}
+
+- (IBAction)removeCategoryKeyboard:(id)sender {
+    [sender resignFirstResponder];
+}
+
 - (IBAction)cameraButton:(UIButton *)sender {
     
     if ([UIImagePickerController isSourceTypeAvailable:
